@@ -373,7 +373,13 @@ function App() {
                 )}
               </>
             )}
-            <s.SpacerMedium />
+            <s.SpacerSmall />
+            <s.TextDescription
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                >
+                  Note: If you are using Metamask, the estimated transaction fee shown is typically higher. The historical average is typically 0.007 ETH. 
+                </s.TextDescription>
+                <s.SpacerMedium />
           </s.Container>
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"}>
