@@ -264,15 +264,20 @@ function App() {
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
                   1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL}.
+                  {CONFIG.NETWORK.SYMBOL}
                 </s.TextTitle>
-                <s.SpacerXSmall />
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Excluding gas fees.
+                  ** Lunar New Year Sale: first 888 HUHU will cost 0.02ETH **
                 </s.TextDescription>
                 <s.SpacerSmall />
+                <s.TextDescription
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                >
+                  Excluding gas fees
+                </s.TextDescription>
+                <s.SpacerXSmall />
                 {blockchain.account === "" ||
                 blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
