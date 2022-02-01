@@ -194,10 +194,6 @@ function App() {
     getData();
   }, [blockchain.account]);
 
-  useEffect(()=> {
-    fetchData();
-}, [data]);
-
   return (
     <s.Screen>
       <s.Container
