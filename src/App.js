@@ -1,9 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Component } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
+import { BsDiscord } from 'react-icons/bs';
+import { FaEthereum, FaTwitter } from 'react-icons/fa';
+import { MdViewModule } from 'react-icons/md';
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -66,9 +69,9 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 200px;
+  width:400px;
   @media (min-width: 767px) {
-    width: 300px;
+    width: 400px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
@@ -204,7 +207,7 @@ function App() {
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+        <ResponsiveWrapper flex={1} style={{ padding: 20 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"example"} src={"/config/images/example.gif"} />
           </s.Container>
@@ -379,7 +382,21 @@ function App() {
                 >
                   Note: If you are using Metamask, the estimated transaction fee shown is typically higher. The historical average is typically 0.007 ETH. 
                 </s.TextDescription>
-                <s.SpacerMedium />
+            <s.SpacerSmall />
+            <div style={{ flexDirection: "row" }}>
+              <a href="https://discord.gg/EmKjcTgJ" style={{margin: 5}} >
+                  <BsDiscord style={{ "font-size": 23 }} />
+              </a>  
+              <a href="https://etherscan.io/address/0x1c69a454bd92974ffaf67a8a5203dd8223d8fd37" style={{margin: 5}} >
+                  <FaEthereum style={{ "font-size": 23 }} />
+              </a>  
+              <a href="https://twitter.com/HuhuNFT" style={{margin: 5}} >
+                  <FaTwitter style={{ "font-size": 23 }} />
+              </a> 
+              <a href="https://opensea.io/collection/huhunft" style={{margin: 5}} >
+                  <MdViewModule style={{ "font-size": 23 }} />
+              </a> 
+            </div>
           </s.Container>
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"}>
